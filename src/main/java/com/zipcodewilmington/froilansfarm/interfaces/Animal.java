@@ -1,4 +1,4 @@
 package com.zipcodewilmington.froilansfarm.interfaces;
 
-public interface Animal extends Eater<Edible>,NoiseMaker{
+public interface Animal<EdibleType extends Edible> extends Eater<EdibleType>,NoiseMaker{
 }
