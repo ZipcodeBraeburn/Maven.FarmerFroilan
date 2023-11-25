@@ -1,4 +1,12 @@
 package com.zipcodewilmington.froilansfarm.abstractClasses;
 
-public abstract class Rider {
+import com.zipcodewilmington.froilansfarm.interfaces.Rideable;
+
+public abstract class Rider<RideableType extends Rideable> extends Person   {
+
+
+
+
+
+
 }
