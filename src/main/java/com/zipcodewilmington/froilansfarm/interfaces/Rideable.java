@@ -1,4 +1,6 @@
 package com.zipcodewilmington.froilansfarm.interfaces;
 
-public interface Rideable {
+import com.zipcodewilmington.froilansfarm.abstractClasses.Rider;
+
+public interface Rideable <RiderType extends Rider>{
 }
