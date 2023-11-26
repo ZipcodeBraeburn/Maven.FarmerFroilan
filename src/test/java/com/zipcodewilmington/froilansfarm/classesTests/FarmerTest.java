@@ -28,12 +28,14 @@ public class FarmerTest {
 
     }
 
-//    @Test
-//    public void testplant(){
-//        Farmer luis = new Farmer();
-//        Crop laura = new TomatoPlant();
-//        CropRow julius = new CropRow();
-//        assertEquals(true, luis.plant((com.zipcodewilmington.froilansfarm.interfaces.Crop) laura,julius ));
-//
-//    }
+    @Test
+    public void testplant(){
+        Farmer luis = new Farmer();
+        TomatoPlant laura = new TomatoPlant();
+        CropRow julius = new CropRow();
+        assertEquals(true, luis.plant( laura,julius ));
+
+    }
+
+
 }

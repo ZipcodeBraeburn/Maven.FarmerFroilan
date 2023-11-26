@@ -1,4 +1,6 @@
 package com.zipcodewilmington.froilansfarm.classes;
 
-public class Field {
+import java.util.ArrayList;
+
+public class Field extends ArrayList<CropRow> {
 }

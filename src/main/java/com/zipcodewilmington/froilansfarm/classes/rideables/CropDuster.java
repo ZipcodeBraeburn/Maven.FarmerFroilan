@@ -14,7 +14,7 @@ public class CropDuster extends Aircraft implements  FarmVehicle <Pilot> {
     }
 
     @Override
-    public void makeNoise() {
-
+    public String makeNoise() {
+       return null;
     }
 }

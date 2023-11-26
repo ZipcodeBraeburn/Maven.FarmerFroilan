@@ -7,12 +7,12 @@ import com.zipcodewilmington.froilansfarm.interfaces.Rideable;
 public class Horse implements Rideable,Animal {
 
     @Override
-    public void eat(Edible edible) {
-
+    public boolean eat(Edible edible) {
+      return true;
     }
 
     @Override
-    public void makeNoise() {
-
+    public String makeNoise() {
+       return null;
     }
 }
