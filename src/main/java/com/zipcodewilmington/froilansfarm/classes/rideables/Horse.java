@@ -9,7 +9,7 @@ import com.zipcodewilmington.froilansfarm.interfaces.Rideable;
 
 public class Horse implements Rideable<Person>,Animal<EarCorn> {
 
-    boolean ifMounted = false;
+    boolean ifMounted = false;// started the horse with nobody on the horse
 
     public boolean getIfMounted(){
         return this.ifMounted;
