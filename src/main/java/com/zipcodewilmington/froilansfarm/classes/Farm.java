@@ -1,4 +1,4 @@
 package com.zipcodewilmington.froilansfarm.classes;
 
-public class Farm {
+public class Farm  {
 }
