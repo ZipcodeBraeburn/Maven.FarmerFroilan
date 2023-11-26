@@ -1,5 +1,5 @@
 package com.zipcodewilmington.froilansfarm.abstractClasses;
 
-public abstract class HorseRider<Horse> extends Rider {
+public abstract class HorseRider<Horse> implements Rider {
 
 }

@@ -1,5 +1,7 @@
 package com.zipcodewilmington.froilansfarm.classes;
 
-public class Farm  {
+import com.zipcodewilmington.froilansfarm.interfaces.VehiculeRider;
+
+public class Farm extends VehiculeRider {
 
 }
