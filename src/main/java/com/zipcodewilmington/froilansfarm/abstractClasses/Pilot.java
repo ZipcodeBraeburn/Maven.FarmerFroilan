@@ -1,15 +1,9 @@
 package com.zipcodewilmington.froilansfarm.abstractClasses;
 
+import com.zipcodewilmington.froilansfarm.classes.rideables.Horse;
 import com.zipcodewilmington.froilansfarm.interfaces.Rideable;
-import com.zipcodewilmington.froilansfarm.interfaces.VehiculeRider;
+import com.zipcodewilmington.froilansfarm.interfaces.Rider;
 
-public abstract class Pilot extends VehiculeRider {
+public interface Pilot extends Rider<Aircraft, Horse> {
 
-    void mount (Rideable horse){
-
-    }
-
-    void dismount( Rideable horse){
-
-    }
 }

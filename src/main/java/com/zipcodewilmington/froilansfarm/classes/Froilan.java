@@ -1,4 +1,5 @@
 package com.zipcodewilmington.froilansfarm.classes;
 
-public class Froilan {
+
+public class Froilan extends Farmer {
 }
