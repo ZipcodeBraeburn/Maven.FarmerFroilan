@@ -1,6 +1,7 @@
 package com.zipcodewilmington.froilansfarm.interfaces;
 
-public interface Vehicle<RiderType extends VehiculeRider> extends NoiseMaker, Rideable<RiderType>{
+
+public interface Vehicle<RiderType1 extends Rider> extends NoiseMaker, Rideable<RiderType1>{
 
 
     // Note: might have to make another interface for riders of man-made vehicles.

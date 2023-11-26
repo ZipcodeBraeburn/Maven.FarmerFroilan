@@ -4,7 +4,7 @@ import com.zipcodewilmington.froilansfarm.classes.Farm;
 import com.zipcodewilmington.froilansfarm.classes.Farmer;
 import com.zipcodewilmington.froilansfarm.interfaces.FarmVehicle;
 
-public class Tractor implements FarmVehicle<Farm> {
+public class Tractor implements FarmVehicle<Farmer> {
     @Override
     public boolean operator(Farm farm) {
         return true;
