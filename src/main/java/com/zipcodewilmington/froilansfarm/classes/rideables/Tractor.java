@@ -11,7 +11,7 @@ public class Tractor implements FarmVehicle<Farm> {
     }
 
     @Override
-    public void makeNoise() {
-
+    public String  makeNoise() {
+             return null;
     }
 }
