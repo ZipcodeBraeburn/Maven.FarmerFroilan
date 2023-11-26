@@ -1,5 +1,4 @@
 package com.zipcodewilmington.froilansfarm.interfaces;
 
-public interface EdibleCrops extends Edible{
-    boolean hasBeenHarvested();
+public interface EdibleCrops extends Edible {
 }

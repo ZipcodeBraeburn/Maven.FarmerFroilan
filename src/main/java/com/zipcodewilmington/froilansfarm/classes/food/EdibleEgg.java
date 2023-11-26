@@ -1,4 +1,12 @@
 package com.zipcodewilmington.froilansfarm.classes.food;
 
-public class EdibleEgg {
+import com.zipcodewilmington.froilansfarm.interfaces.Edible;
+
+import java.util.Random;
+
+public class EdibleEgg implements Edible {
+
+
+
+
 }

@@ -5,13 +5,15 @@ import com.zipcodewilmington.froilansfarm.interfaces.Edible;
 
 public abstract class Person implements Animal {
 
-    public void makeNoise() {
+    public String makeNoise() {
         System.out.println("What a great Day");
 
+        return null;
     }
 
 
-    public void eat(Edible edible) {
+    public boolean eat(Edible edible) {
 
+        return false;
     }
 }
