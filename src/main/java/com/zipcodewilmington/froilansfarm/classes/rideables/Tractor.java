@@ -1,4 +1,17 @@
 package com.zipcodewilmington.froilansfarm.classes.rideables;
 
-public class Tractor {
+import com.zipcodewilmington.froilansfarm.classes.Farm;
+import com.zipcodewilmington.froilansfarm.classes.Farmer;
+import com.zipcodewilmington.froilansfarm.interfaces.FarmVehicle;
+
+public class Tractor implements FarmVehicle<Farm> {
+    @Override
+    public boolean operator(Farm farm) {
+        return true;
+    }
+
+    @Override
+    public void makeNoise() {
+
+    }
 }
