@@ -1,4 +1,7 @@
 package com.zipcodewilmington.froilansfarm.classes.storage;
 
-public class PotatoStorage {
+import com.zipcodewilmington.froilansfarm.abstractClasses.EdibleStorage;
+import com.zipcodewilmington.froilansfarm.classes.food.Potato;
+
+public class PotatoStorage extends EdibleStorage<Potato> {
 }
