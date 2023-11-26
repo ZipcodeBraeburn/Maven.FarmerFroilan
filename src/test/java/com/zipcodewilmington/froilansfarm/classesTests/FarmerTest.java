@@ -1,12 +1,10 @@
 package com.zipcodewilmington.froilansfarm.classesTests;
 
-import com.zipcodewilmington.froilansfarm.abstractClasses.Botanist;
-import com.zipcodewilmington.froilansfarm.abstractClasses.Rider;
+import com.zipcodewilmington.froilansfarm.interfaces.Botanist;
+import com.zipcodewilmington.froilansfarm.interfaces.Rider;
 import com.zipcodewilmington.froilansfarm.classes.CropRow;
 import com.zipcodewilmington.froilansfarm.classes.Farmer;
-import com.zipcodewilmington.froilansfarm.classes.food.Crop;
 import com.zipcodewilmington.froilansfarm.classes.food.TomatoPlant;
-import com.zipcodewilmington.froilansfarm.classesTests.food.TomatoPlantTests;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.Assert.*;

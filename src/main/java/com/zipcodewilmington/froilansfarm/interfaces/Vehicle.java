@@ -1,7 +1,5 @@
 package com.zipcodewilmington.froilansfarm.interfaces;
 
-import com.zipcodewilmington.froilansfarm.abstractClasses.Rider;
-
 public interface Vehicle<RiderType extends VehiculeRider> extends NoiseMaker, Rideable<RiderType>{
 
 

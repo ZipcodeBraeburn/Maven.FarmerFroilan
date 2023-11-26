@@ -1,4 +1,4 @@
-package com.zipcodewilmington.froilansfarm.abstractClasses;
+package com.zipcodewilmington.froilansfarm.interfaces;
 
 import com.zipcodewilmington.froilansfarm.interfaces.Rideable;
 
