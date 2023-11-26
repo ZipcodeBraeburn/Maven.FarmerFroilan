@@ -1,5 +1,5 @@
 package com.zipcodewilmington.froilansfarm.interfaces;
 
 public interface Eater< EdibleType extends Edible> {
-    public void eat(EdibleType edible);
+    public boolean eat(EdibleType edible);
 }
