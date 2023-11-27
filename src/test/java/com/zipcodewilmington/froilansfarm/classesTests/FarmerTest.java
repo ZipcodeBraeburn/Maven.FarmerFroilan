@@ -35,5 +35,10 @@ public class FarmerTest {
 
     }
 
+    @Test
+    public void testFarmerPlant(){
+
+    }
+
 
 }

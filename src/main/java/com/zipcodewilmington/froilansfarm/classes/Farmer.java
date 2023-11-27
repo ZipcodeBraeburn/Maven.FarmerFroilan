@@ -9,10 +9,10 @@ import com.zipcodewilmington.froilansfarm.interfaces.Rider;
 
 public class Farmer extends Person implements Botanist, Rider<Tractor,Horse> {
     @Override
-    public boolean plant(Crop crop ,CropRow cropRow) {
-       return true;
-    }
+    public boolean plant(Crop crop, CropRow<? extends Crop> cropRow) {
 
+        return cropRow.add(crop);
+    }
 
     @Override
     public boolean mount(Tractor tractor) {
@@ -43,4 +43,5 @@ public class Farmer extends Person implements Botanist, Rider<Tractor,Horse> {
         }
         return false;
     }
+
 }
