@@ -28,10 +28,6 @@ public class Chicken implements Animal<Potato>, Produce<EdibleEgg> {
         this.hasBeenFertilized = hasBeenFertilized;
     }
 
-    public boolean getHasBeenFertilized(){
-        return this.hasBeenFertilized;
-    }
-
     @Override
     public String makeNoise() {
 
