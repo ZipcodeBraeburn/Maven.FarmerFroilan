@@ -6,6 +6,7 @@ import com.zipcodewilmington.froilansfarm.classes.Froilan;
 import com.zipcodewilmington.froilansfarm.classes.food.Tomato;
 import com.zipcodewilmington.froilansfarm.classes.food.TomatoPlant;
 import com.zipcodewilmington.froilansfarm.classes.rideables.Tractor;
+import com.zipcodewilmington.froilansfarm.classes.storage.FarmHouse;
 import com.zipcodewilmington.froilansfarm.classes.storage.TomatoStorage;
 import com.zipcodewilmington.froilansfarm.interfaces.Vehicle;
 import org.junit.Assert;
@@ -45,7 +46,8 @@ public void setup(){
 
     @Test
     public void testoperator(){
-        Farm farm = new Farm();
+        FarmHouse farmHouse = new FarmHouse();
+        Farm farm = new Farm(farmHouse);
         Tractor kubato = new Tractor();
         assertTrue(kubato.operator(farm));
 

@@ -24,7 +24,7 @@ public class Horse implements Rideable<Rider>,Animal<EarCorn> {
 
     @Override
     public String makeNoise() {
-       return null;
+       return "Neighhhhhh";
     }
 
 
