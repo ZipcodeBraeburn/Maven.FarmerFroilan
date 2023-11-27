@@ -1,9 +1,7 @@
 package com.zipcodewilmington.froilansfarm.classes;
-
-import com.zipcodewilmington.froilansfarm.abstractClasses.Aircraft;
-import com.zipcodewilmington.froilansfarm.abstractClasses.Pilot;
 import com.zipcodewilmington.froilansfarm.classes.rideables.CropDuster;
 import com.zipcodewilmington.froilansfarm.classes.rideables.Horse;
+import com.zipcodewilmington.froilansfarm.interfaces.Pilot;
 
 public class Froilanda implements Pilot {
 
