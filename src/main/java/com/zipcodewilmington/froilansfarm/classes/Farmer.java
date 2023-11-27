@@ -13,12 +13,20 @@ public class Farmer extends Person implements Botanist, Rider<Tractor,Horse> {
 
     @Override
     public boolean mount(Tractor tractor) {
-        return true;
+        if(tractor.isIfMounted() == false){ // is false cause nobody is on the horse
+            tractor.setIfMounted(true);  //  the horse is  mounted
+            return true;
+        }
+        return false;
     }
 
     @Override
     public boolean dismount(Tractor tractor) {
-        return true;
+        if(tractor.isIfMounted() == true){ // is true cause somebody is on the  horse
+            tractor.setIfMounted(false);//  the horse is not mounted
+            return true;
+        }
+        return false;
     }
 
 

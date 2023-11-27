@@ -60,7 +60,7 @@ public class CropDusterTests {
 
         cropDuster.fertilize(tomatoRow);
 
-        Assert.assertTrue(tomatoRow.get(0).getHasBeenFertilized());
+        Assert.assertTrue(tomatoRow.get(0).hasBeenFertilized);
     }
 
 }

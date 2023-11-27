@@ -12,11 +12,11 @@ public class Tractor implements FarmVehicle<Farmer> {
 
     boolean ifMouted = false;
 
-    public boolean isIfMouted() {
+    public boolean isIfMounted() {
         return this.ifMouted;
     }
 
-    public void setIfMouted(boolean mouted) {
+    public void setIfMounted(boolean mouted) {
         this.ifMouted = mouted;
     }
 
@@ -41,8 +41,8 @@ public class Tractor implements FarmVehicle<Farmer> {
             Edible e = c.yield();
             if( e != null){
                 storage.add(e);
+                countCrop++;
             }
-            countCrop++;
         }
         return countCrop;
     }
