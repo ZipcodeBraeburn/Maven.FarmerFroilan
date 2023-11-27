@@ -67,6 +67,7 @@ public void setup(){
 
     @Test
     public void TestIfCropHasBeenHarvested(){
+        tomatoPlant.setHasBeenFertilized(true);
         // if cropRow have fruit count fruit per crop in row.array list
         cropRow.add(tomatoPlant);
         cropRow.add(tomatoPlant);
@@ -74,7 +75,7 @@ public void setup(){
 
        int actual = tractor.harvestCrop(cropRow);
        int expected = 3;
-       Assert.assertEquals(actual,expected);
+       Assert.assertEquals(expected,actual);
 
     }
 }

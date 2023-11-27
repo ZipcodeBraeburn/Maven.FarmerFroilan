@@ -1,18 +1,15 @@
 package com.zipcodewilmington.froilansfarm.classes;
 
+import com.zipcodewilmington.froilansfarm.classes.food.CornStalk;
+import com.zipcodewilmington.froilansfarm.classes.food.PotatoPlant;
+import com.zipcodewilmington.froilansfarm.classes.food.TomatoPlant;
 import com.zipcodewilmington.froilansfarm.classes.rideables.Horse;
 import com.zipcodewilmington.froilansfarm.classes.rideables.Tractor;
 import com.zipcodewilmington.froilansfarm.interfaces.Botanist;
 import com.zipcodewilmington.froilansfarm.abstractClasses.Person;
-import com.zipcodewilmington.froilansfarm.interfaces.Crop;
 import com.zipcodewilmington.froilansfarm.interfaces.Rider;
 
 public class Farmer extends Person implements Botanist, Rider<Tractor,Horse> {
-    @Override
-    public boolean plant(Crop crop ,CropRow cropRow) {
-       return true;
-    }
-
 
     @Override
     public boolean mount(Tractor tractor) {
@@ -42,5 +39,20 @@ public class Farmer extends Person implements Botanist, Rider<Tractor,Horse> {
             return true;
         }
         return false;
+    }
+
+    @Override
+    public boolean plant(TomatoPlant crop, CropRow<TomatoPlant> cropRow) {
+        return cropRow.add(crop);
+    }
+
+    @Override
+    public boolean plant(PotatoPlant crop, CropRow<PotatoPlant> cropRow) {
+        return cropRow.add(crop);
+    }
+
+    @Override
+    public boolean plant(CornStalk crop, CropRow<CornStalk> cropRow) {
+        return cropRow.add(crop);
     }
 }

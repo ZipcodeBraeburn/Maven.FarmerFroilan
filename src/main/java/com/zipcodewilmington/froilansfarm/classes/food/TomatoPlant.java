@@ -5,18 +5,23 @@ import com.zipcodewilmington.froilansfarm.interfaces.EdibleCrops;
 
 public class TomatoPlant implements Crop<Tomato> {
 
+    boolean hasBeenFertilized = false;
 
     @Override
-    public Tomato yield(boolean hasBeenFertilized, boolean hasBeenHarvested) {
-        if (hasBeenFertilized && hasBeenHarvested){
-            return new Tomato();
-        }
-        return null;
-
+    public void setHasBeenFertilized(boolean hasBeenFertilized){
+        this.hasBeenFertilized = hasBeenFertilized;
     }
 
     @Override
-    public Tomato yield(Boolean hasBeenFertilized) {
+    public boolean getHasBeenFertilized(){
+        return this.hasBeenFertilized;
+    }
+
+    @Override
+    public Tomato yield(Boolean hasBeen) {
+        if(this.hasBeenFertilized && hasBeen){
+            return new Tomato();
+        }
         return null;
     }
 }

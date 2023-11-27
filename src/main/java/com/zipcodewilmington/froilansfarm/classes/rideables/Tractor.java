@@ -40,7 +40,7 @@ public class Tractor implements FarmVehicle<Farmer> {
         int countCrop = 0;
 
         for (int i = 0; i < cropRow.size(); i++) {
-            if (cropRow.get(i).yield(true, true) != null) {
+            if (cropRow.get(i).yield(true) != null) {
                 countCrop++;
             }
 

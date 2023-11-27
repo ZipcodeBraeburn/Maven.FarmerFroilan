@@ -1,6 +1,9 @@
 package com.zipcodewilmington.froilansfarm.classes.rideables;
 
 import com.zipcodewilmington.froilansfarm.abstractClasses.Aircraft;
+import com.zipcodewilmington.froilansfarm.classes.CropRow;
+import com.zipcodewilmington.froilansfarm.interfaces.Crop;
+import com.zipcodewilmington.froilansfarm.interfaces.EdibleCrops;
 import com.zipcodewilmington.froilansfarm.interfaces.Pilot;
 import com.zipcodewilmington.froilansfarm.classes.Farm;
 import com.zipcodewilmington.froilansfarm.interfaces.FarmVehicle;
@@ -19,10 +22,13 @@ public class CropDuster extends Aircraft implements  FarmVehicle <Pilot> {
     public boolean setIfMouted(boolean mounted) {
        return this.ifMouted = mounted;
 
+    }
 
-
-}
-
+    public void fertilize(CropRow<? extends Crop> cropRow){
+        for(Crop c : cropRow){
+            c.setHasBeenFertilized(true);
+        }
+    }
 
     @Override
     public boolean operator(Farm farm) {
@@ -32,6 +38,6 @@ public class CropDuster extends Aircraft implements  FarmVehicle <Pilot> {
 
     @Override
     public String makeNoise() {
-       return null;
+       return "Whir~~~~!";
     }
 }
