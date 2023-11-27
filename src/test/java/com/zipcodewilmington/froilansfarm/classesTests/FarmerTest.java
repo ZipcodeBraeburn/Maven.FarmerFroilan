@@ -3,7 +3,6 @@ package com.zipcodewilmington.froilansfarm.classesTests;
 import com.zipcodewilmington.froilansfarm.classes.food.CornStalk;
 import com.zipcodewilmington.froilansfarm.classes.food.PotatoPlant;
 import com.zipcodewilmington.froilansfarm.interfaces.Botanist;
-import com.zipcodewilmington.froilansfarm.interfaces.Crop;
 import com.zipcodewilmington.froilansfarm.interfaces.Rider;
 import com.zipcodewilmington.froilansfarm.classes.CropRow;
 import com.zipcodewilmington.froilansfarm.classes.Farmer;

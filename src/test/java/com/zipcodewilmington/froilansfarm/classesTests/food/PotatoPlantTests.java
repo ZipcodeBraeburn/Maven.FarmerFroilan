@@ -24,30 +24,30 @@ public class PotatoPlantTests {
 
     @Test
     public void testPotatoPlantYieldCrops1(){
-        boolean hasBeenHarvested = true;
+        potatoPlant.setHasBeenHarvested(true);
         potatoPlant.setHasBeenFertilized(true);
-        EdibleCrops potatoYield = potatoPlant.yield(hasBeenHarvested);
+        EdibleCrops potatoYield = potatoPlant.yield();
         Assert.assertNotNull(potatoYield);
     }
     @Test
     public void testPotatoPlantYieldCrops2(){
-        boolean hasBeenHarvested = true;
+        potatoPlant.setHasBeenHarvested(true);
         potatoPlant.setHasBeenFertilized(false);
-        EdibleCrops tomatoYield = potatoPlant.yield(hasBeenHarvested);
+        EdibleCrops tomatoYield = potatoPlant.yield();
         Assert.assertNull(tomatoYield);
     }
     @Test
     public void testPotatoPlantYieldCrops3(){
-        boolean hasBeenHarvested = false;
+        potatoPlant.setHasBeenHarvested(false);
         potatoPlant.setHasBeenFertilized(true);
-        EdibleCrops potatoYield = potatoPlant.yield(hasBeenHarvested);
+        EdibleCrops potatoYield = potatoPlant.yield();
         Assert.assertNull(potatoYield);
     }
     @Test
     public void testTomatoPlantYieldCrops4(){
-        boolean hasBeenHarvested = false;
+        potatoPlant.setHasBeenHarvested(false);
         potatoPlant.setHasBeenFertilized(false);
-        EdibleCrops potatoYield = potatoPlant.yield(hasBeenHarvested);
+        EdibleCrops potatoYield = potatoPlant.yield();
         Assert.assertNull(potatoYield);
     }
     // test that it only produce one type (potato)

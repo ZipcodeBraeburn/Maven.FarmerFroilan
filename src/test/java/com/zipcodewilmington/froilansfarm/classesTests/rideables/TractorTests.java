@@ -6,6 +6,7 @@ import com.zipcodewilmington.froilansfarm.classes.Froilan;
 import com.zipcodewilmington.froilansfarm.classes.food.Tomato;
 import com.zipcodewilmington.froilansfarm.classes.food.TomatoPlant;
 import com.zipcodewilmington.froilansfarm.classes.rideables.Tractor;
+import com.zipcodewilmington.froilansfarm.classes.storage.TomatoStorage;
 import com.zipcodewilmington.froilansfarm.interfaces.Vehicle;
 import org.junit.Assert;
 import org.junit.Before;
@@ -19,12 +20,14 @@ public class TractorTests {
     Tractor tractor;
     CropRow cropRow;
     TomatoPlant tomatoPlant;
+    TomatoStorage storage;
 @Before
 public void setup(){
     tractor = new Tractor();
     froilan = new Froilan();
     cropRow = new CropRow();
     tomatoPlant = new TomatoPlant();
+    storage = new TomatoStorage();
 }
     @Test
     public void testTractor(){
@@ -67,15 +70,20 @@ public void setup(){
 
     @Test
     public void TestIfCropHasBeenHarvested(){
+        TomatoPlant tomatoPlant2 = new TomatoPlant();
+        TomatoPlant tomatoPlant3 = new TomatoPlant();
         tomatoPlant.setHasBeenFertilized(true);
+        tomatoPlant2.setHasBeenFertilized(true);
+        tomatoPlant3.setHasBeenFertilized(true);
         // if cropRow have fruit count fruit per crop in row.array list
         cropRow.add(tomatoPlant);
-        cropRow.add(tomatoPlant);
-        cropRow.add(tomatoPlant);
+        cropRow.add(tomatoPlant2);
+        cropRow.add(tomatoPlant3);
 
-       int actual = tractor.harvestCrop(cropRow);
+       int actual = tractor.harvestCrop(cropRow, storage);
        int expected = 3;
        Assert.assertEquals(expected,actual);
+       Assert.assertEquals(3, storage.size());
 
     }
 }

@@ -1,6 +1,6 @@
 package com.zipcodewilmington.froilansfarm.classes;
 
-import com.zipcodewilmington.froilansfarm.interfaces.Crop;
+import com.zipcodewilmington.froilansfarm.abstractClasses.Crop;
 
 import java.util.ArrayList;
 
