@@ -33,8 +33,8 @@ public class PotatoPlantTests {
     public void testPotatoPlantYieldCrops2(){
         potatoPlant.setHasBeenHarvested(true);
         potatoPlant.setHasBeenFertilized(false);
-        EdibleCrops tomatoYield = potatoPlant.yield();
-        Assert.assertNull(tomatoYield);
+        EdibleCrops potatoYield = potatoPlant.yield();
+        Assert.assertNull(potatoYield);
     }
     @Test
     public void testPotatoPlantYieldCrops3(){
