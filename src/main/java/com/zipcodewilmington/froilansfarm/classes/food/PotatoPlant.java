@@ -15,17 +15,12 @@ public class PotatoPlant implements Crop<Potato> {
         return this.hasBeenFertilized;
     }
 
-    @Override
-    public Potato yield(boolean hasBeenFertilized, boolean hasBeenHarvested) {
 
-        if (this.hasBeenFertilized && hasBeenHarvested){
+    @Override
+    public Potato yield(Boolean hasBeen) {
+        if(this.hasBeenFertilized && hasBeen){
             return new Potato();
         }
-        return null;
-    }
-
-    @Override
-    public Potato yield(Boolean hasBeenFertilized) {
         return null;
     }
 }
