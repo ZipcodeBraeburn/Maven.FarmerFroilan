@@ -63,4 +63,11 @@ public class Farm {
     public EggStorage getEggStorage() {
         return eggStorage;
     }
+
+    public Field getField(){
+        return this.field;
+    }
+    public void setField(Field field){
+        this.field = field;
+    }
 }
