@@ -1,6 +1,9 @@
 package com.zipcodewilmington.froilansfarm.classesTests.rideables;
 
+import com.zipcodewilmington.froilansfarm.classes.food.EarCorn;
 import com.zipcodewilmington.froilansfarm.classes.rideables.Horse;
+import com.zipcodewilmington.froilansfarm.classes.storage.CornStorage;
+import com.zipcodewilmington.froilansfarm.interfaces.Eater;
 import com.zipcodewilmington.froilansfarm.interfaces.Rideable;
 import org.junit.Assert;
 import org.junit.Test;
@@ -28,7 +31,15 @@ public class HorseTests {
         boolean juju = true;
         Assert.assertTrue(juju);
     }
-
+ @Test
+    public void TestIfHorseEatEarCorn(){
+        Horse horse = new Horse();
+     EarCorn earCorn = new EarCorn();
+     CornStorage cornStorage = new CornStorage();
+     cornStorage.add(earCorn);
+     Boolean eaten = horse.eat(earCorn ,cornStorage);
+     Assert.assertTrue(eaten);
+ }
 
 
 
