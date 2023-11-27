@@ -49,7 +49,8 @@ public class ChickenTests {
     // dose it eat potato
     @Test
     public void TestIfChickenEatPotato(){
-     boolean eaten = chicken.eat( potato,potatoStorage );
-Assert.assertTrue(eaten);
+        potatoStorage.add(potato);
+        boolean eaten = chicken.eat( potato,potatoStorage );
+        Assert.assertTrue(eaten);
     }
 }
