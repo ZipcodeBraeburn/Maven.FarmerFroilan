@@ -38,8 +38,6 @@ public class ChickenTests {
     }
 
 
-
-
     // dose it make noise
     @Test
     public void TestWhatSoundchickenMake(){

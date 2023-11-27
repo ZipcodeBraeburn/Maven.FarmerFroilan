@@ -5,8 +5,9 @@ import com.zipcodewilmington.froilansfarm.classes.rideables.Tractor;
 import com.zipcodewilmington.froilansfarm.interfaces.Botanist;
 import com.zipcodewilmington.froilansfarm.abstractClasses.Person;
 import com.zipcodewilmington.froilansfarm.interfaces.Crop;
+import com.zipcodewilmington.froilansfarm.interfaces.Rider;
 
-public class Farmer extends Person<Tractor, Horse> implements Botanist {
+public class Farmer extends Person implements Botanist, Rider<Tractor,Horse> {
     @Override
     public boolean plant(Crop crop ,CropRow cropRow) {
        return true;

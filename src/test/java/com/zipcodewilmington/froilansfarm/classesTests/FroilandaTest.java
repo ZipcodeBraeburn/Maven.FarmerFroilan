@@ -1,10 +1,11 @@
 package com.zipcodewilmington.froilansfarm.classesTests;
 
+import com.zipcodewilmington.froilansfarm.classes.Froilan;
 import com.zipcodewilmington.froilansfarm.classes.Froilanda;
-import com.zipcodewilmington.froilansfarm.classes.food.EarCorn;
+import com.zipcodewilmington.froilansfarm.classes.food.Tomato;
 import com.zipcodewilmington.froilansfarm.classes.rideables.CropDuster;
 import com.zipcodewilmington.froilansfarm.classes.rideables.Horse;
-import com.zipcodewilmington.froilansfarm.classes.storage.CornStorage;
+import com.zipcodewilmington.froilansfarm.classes.storage.TomatoStorage;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -52,5 +53,16 @@ public class FroilandaTest {
         assertTrue(froilanda.dismount(cropDuster));
 }
 
+
+    @Test
+    public void testifFroilandaEat(){
+
+        Froilanda froilanda = new Froilanda();
+        TomatoStorage storageOfTomatoes = new TomatoStorage();
+        Tomato tomato = new Tomato();
+        storageOfTomatoes.add(tomato);
+        boolean eaten = froilanda.eat(tomato, storageOfTomatoes);
+        Assert.assertTrue(eaten);
+    }
 }
 

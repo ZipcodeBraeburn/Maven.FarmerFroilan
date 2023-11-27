@@ -1,9 +1,10 @@
 package com.zipcodewilmington.froilansfarm.classes;
+import com.zipcodewilmington.froilansfarm.abstractClasses.Person;
 import com.zipcodewilmington.froilansfarm.classes.rideables.CropDuster;
 import com.zipcodewilmington.froilansfarm.classes.rideables.Horse;
 import com.zipcodewilmington.froilansfarm.interfaces.Pilot;
 
-public class Froilanda implements Pilot {
+public class Froilanda extends Person implements Pilot {
 
     boolean ifMounted = false; // no one mounted it
     @Override
@@ -44,4 +45,6 @@ public class Froilanda implements Pilot {
         }
         return false;
     }
+
+
 }

@@ -6,8 +6,9 @@ import com.zipcodewilmington.froilansfarm.classes.food.EarCorn;
 import com.zipcodewilmington.froilansfarm.interfaces.Animal;
 import com.zipcodewilmington.froilansfarm.interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.interfaces.Rideable;
+import com.zipcodewilmington.froilansfarm.interfaces.Rider;
 
-public class Horse implements Rideable<Person>,Animal<EarCorn> {
+public class Horse implements Rideable<Rider>,Animal<EarCorn> {
 
     boolean ifMounted = false;// started the horse with nobody on the horse
 
