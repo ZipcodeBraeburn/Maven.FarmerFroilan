@@ -175,6 +175,11 @@ public class FridayTests {
     public void testFly(){
         Assert.assertTrue(cropDuster.fly());
     }
+
+    @Test
+    public void testOperator(){
+       Assert.assertTrue(cropDuster.operator(farm));
+    }
     @Test
     public void testFroilandaMountingCropDuster(){
        Assert.assertTrue( froilanda.mount(cropDuster));
