@@ -5,6 +5,7 @@ import com.zipcodewilmington.froilansfarm.classes.CropRow;
 import com.zipcodewilmington.froilansfarm.classes.Farm;
 import com.zipcodewilmington.froilansfarm.classes.food.TomatoPlant;
 import com.zipcodewilmington.froilansfarm.classes.rideables.CropDuster;
+import com.zipcodewilmington.froilansfarm.classes.storage.FarmHouse;
 import com.zipcodewilmington.froilansfarm.interfaces.FarmVehicle;
 import org.junit.Assert;
 import org.junit.Test;
@@ -30,7 +31,8 @@ public class CropDusterTests {
 
     @Test
     public void testoperator() {
-        Farm farm = new Farm();
+        FarmHouse farmHouse = new FarmHouse();
+        Farm farm = new Farm(farmHouse);
         CropDuster lily = new CropDuster();
         Assert.assertTrue(lily.operator(farm));
     }
@@ -59,8 +61,6 @@ public class CropDusterTests {
         cropDuster.fertilize(tomatoRow);
 
         Assert.assertTrue(tomatoRow.get(0).getHasBeenFertilized());
-
-        // REWRITE YIELD METHOD, DON'T NEED 2 PARAMETERS YIELD
     }
 
 }
