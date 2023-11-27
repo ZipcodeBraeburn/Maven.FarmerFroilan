@@ -1,8 +1,11 @@
 package com.zipcodewilmington.froilansfarm.classesTests;
 
 import com.zipcodewilmington.froilansfarm.classes.Froilanda;
+import com.zipcodewilmington.froilansfarm.classes.food.EarCorn;
 import com.zipcodewilmington.froilansfarm.classes.rideables.CropDuster;
 import com.zipcodewilmington.froilansfarm.classes.rideables.Horse;
+import com.zipcodewilmington.froilansfarm.classes.storage.CornStorage;
+import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.Assert.assertNotNull;
