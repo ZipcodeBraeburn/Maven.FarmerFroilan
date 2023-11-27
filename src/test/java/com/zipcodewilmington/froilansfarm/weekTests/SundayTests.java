@@ -146,6 +146,8 @@ public class SundayTests {
         // setting up farm
         farm = new Farm(farmHouse);
 
+        farm.setField(fieldTest);
+
         farm.addCoops(coop);
         farm.addCoops(coop2);
         farm.addCoops(coop3);
