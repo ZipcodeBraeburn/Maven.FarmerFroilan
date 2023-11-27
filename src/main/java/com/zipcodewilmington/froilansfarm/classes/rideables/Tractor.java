@@ -5,6 +5,7 @@ import com.zipcodewilmington.froilansfarm.classes.CropRow;
 import com.zipcodewilmington.froilansfarm.classes.Farm;
 import com.zipcodewilmington.froilansfarm.classes.Farmer;
 import com.zipcodewilmington.froilansfarm.abstractClasses.Crop;
+import com.zipcodewilmington.froilansfarm.interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.interfaces.FarmVehicle;
 
 public class Tractor implements FarmVehicle<Farmer> {
@@ -37,8 +38,9 @@ public class Tractor implements FarmVehicle<Farmer> {
 
         for (Crop c : cropRow) {
             c.setHasBeenHarvested(true);
-            if(c.yield() != null){
-                storage.add(c);
+            Edible e = c.yield();
+            if( e != null){
+                storage.add(e);
             }
             countCrop++;
         }
