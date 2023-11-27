@@ -134,7 +134,7 @@ public class SundayTests {
             potatoStorage.add(new Potato());
         }
         cornStorage = new CornStorage();
-        for(int i = 0; i < 20; i++){
+        for(int i = 0; i < 40; i++){
             cornStorage.add(new EarCorn());
         }
         eggStorage = new EggStorage();
@@ -157,10 +157,6 @@ public class SundayTests {
         farm.addStables(stable2);
         farm.addStables(stable3);
 
-        tomatoStorage = new TomatoStorage();
-        potatoStorage = new PotatoStorage();
-        cornStorage = new CornStorage();
-
         farm.setCornStorage(cornStorage);
         farm.setEggStorage(eggStorage);
         farm.setPotatoStorage(potatoStorage);
@@ -170,7 +166,8 @@ public class SundayTests {
 
     @Test
     public void test(){
-        Assert.assertEquals(4, coop.size());
+        Assert.assertEquals(4, farm.getCoops().get(0).size());
+        Assert.assertEquals(20, tomatoStorage.size());
     }
 
     @Test
@@ -195,6 +192,65 @@ public class SundayTests {
         }
     }
 
+    @Test
+    public void testFeedHorses(){
+        for(Stable s : farm.getStables()){
+            for(Horse h : s){
+                Assert.assertTrue(h.eat(farm.getCornStorage().get(0), farm.getCornStorage()));
+                Assert.assertTrue(h.eat(farm.getCornStorage().get(1), farm.getCornStorage()));
+                Assert.assertTrue(h.eat(farm.getCornStorage().get(2), farm.getCornStorage()));
+            }
+        }
+    }
 
+    @Test
+    public void testFroilanBreakfast(){
+        // froilan eats 1 corn
+        Assert.assertTrue(froilan.eat(farm.getCornStorage().get(0), farm.getCornStorage()));
+        // 2 tomatoes
+        Assert.assertTrue(froilan.eat(farm.getTomatoStorage().get(0), farm.getTomatoStorage()));
+        Assert.assertTrue(froilan.eat(farm.getTomatoStorage().get(1), farm.getTomatoStorage()));
+        // 5 eggs
+        Assert.assertTrue(froilan.eat(farm.getEggStorage().get(0), farm.getEggStorage()));
+        Assert.assertTrue(froilan.eat(farm.getEggStorage().get(1), farm.getEggStorage()));
+        Assert.assertTrue(froilan.eat(farm.getEggStorage().get(2), farm.getEggStorage()));
+        Assert.assertTrue(froilan.eat(farm.getEggStorage().get(3), farm.getEggStorage()));
+        Assert.assertTrue(froilan.eat(farm.getEggStorage().get(4), farm.getEggStorage()));
+
+    }
+
+    @Test
+    public void testFroilandaBreakfast(){
+        // froilanda eats 2 corn
+        Assert.assertTrue(froilanda.eat(farm.getCornStorage().get(0), farm.getCornStorage()));
+        Assert.assertTrue(froilanda.eat(farm.getCornStorage().get(0), farm.getCornStorage()));
+        // 1 tomato
+        Assert.assertTrue(froilanda.eat(farm.getTomatoStorage().get(0), farm.getTomatoStorage()));
+        // 2 eggs
+        Assert.assertTrue(froilanda.eat(farm.getEggStorage().get(0), farm.getEggStorage()));
+        Assert.assertTrue(froilanda.eat(farm.getEggStorage().get(1), farm.getEggStorage()));
+    }
+
+    @Test
+    public void testFroilanAndFroilandaMakeNoise(){
+        Assert.assertEquals("What a great Day", froilan.makeNoise());
+        Assert.assertEquals("What a great Day", froilanda.makeNoise());
+    }
+
+    @Test
+    public void testFroilanPlant(){
+        CornStalk cornStalk = new CornStalk();
+        TomatoPlant tomatoPlant = new TomatoPlant();
+        PotatoPlant potatoPlant = new PotatoPlant();
+        Assert.assertTrue(froilan.plant(cornStalk, cropRow));
+        Assert.assertTrue(froilan.plant(tomatoPlant, cropRow2));
+        Assert.assertTrue(froilan.plant(potatoPlant, cropRow3));
+
+        Assert.assertEquals(21, farm.getField().get(0).size());
+        Assert.assertEquals(21, farm.getField().get(1).size());
+        Assert.assertEquals(21, farm.getField().get(2).size());
+        Assert.assertEquals(20, farm.getField().get(3).size());
+        Assert.assertEquals(20, farm.getField().get(4).size());
+    }
 
 }
