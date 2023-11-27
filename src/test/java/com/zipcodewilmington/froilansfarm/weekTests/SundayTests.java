@@ -5,9 +5,7 @@ import com.zipcodewilmington.froilansfarm.classes.food.*;
 import com.zipcodewilmington.froilansfarm.classes.rideables.CropDuster;
 import com.zipcodewilmington.froilansfarm.classes.rideables.Horse;
 import com.zipcodewilmington.froilansfarm.classes.rideables.Tractor;
-import com.zipcodewilmington.froilansfarm.classes.storage.ChickenCoop;
-import com.zipcodewilmington.froilansfarm.classes.storage.FarmHouse;
-import com.zipcodewilmington.froilansfarm.classes.storage.Stable;
+import com.zipcodewilmington.froilansfarm.classes.storage.*;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -34,17 +32,38 @@ public class SundayTests {
     static FarmHouse farmHouse;
 
     static Farm farm;
+    static TomatoStorage tomatoStorage;
+    static PotatoStorage potatoStorage;
+    static CornStorage cornStorage;
+    static EggStorage eggStorage;
 
 
     @Before
     public void setUp(){
         // setting up field
          fieldTest = new Field();
+
          cropRow = new CropRow<>();
+         for(int i = 0; i < 20; i++){
+             cropRow.add(new CornStalk());
+         }
          cropRow2 = new CropRow<>();
+        for(int i = 0; i < 20; i++){
+            cropRow2.add(new TomatoPlant());
+        }
          cropRow3 = new CropRow<>();
+        for(int i = 0; i < 20; i++){
+            cropRow3.add(new PotatoPlant());
+        }
          cropRow4 = new CropRow<>();
+        for(int i = 0; i < 20; i++){
+            cropRow4.add(new TomatoPlant());
+        }
          cropRow5 = new CropRow<>();
+        for(int i = 0; i < 20; i++){
+            cropRow5.add(new CornStalk());
+        }
+
         fieldTest.add(cropRow);
         fieldTest.add(cropRow2);
         fieldTest.add(cropRow3);
@@ -105,6 +124,25 @@ public class SundayTests {
         farmHouse.add(froilan);
         farmHouse.add(froilanda);
 
+        // setting up storages
+        tomatoStorage = new TomatoStorage();
+        for(int i = 0; i < 20; i++){
+            tomatoStorage.add(new Tomato());
+        }
+        potatoStorage = new PotatoStorage();
+        for(int i = 0; i < 20; i++){
+            potatoStorage.add(new Potato());
+        }
+        cornStorage = new CornStorage();
+        for(int i = 0; i < 20; i++){
+            cornStorage.add(new EarCorn());
+        }
+        eggStorage = new EggStorage();
+        for(int i = 0; i < 20; i++){
+            eggStorage.add(new EdibleEgg());
+        }
+
+
         // setting up farm
         farm = new Farm(farmHouse);
 
@@ -116,6 +154,15 @@ public class SundayTests {
         farm.addStables(stable);
         farm.addStables(stable2);
         farm.addStables(stable3);
+
+        tomatoStorage = new TomatoStorage();
+        potatoStorage = new PotatoStorage();
+        cornStorage = new CornStorage();
+
+        farm.setCornStorage(cornStorage);
+        farm.setEggStorage(eggStorage);
+        farm.setPotatoStorage(potatoStorage);
+        farm.setTomatoStorage(tomatoStorage);
 
     }
 
@@ -131,6 +178,17 @@ public class SundayTests {
                 Assert.assertTrue(froilan.mount(h));
                 Assert.assertNotNull(h.makeNoise());
                 Assert.assertTrue(froilan.dismount(h));
+            }
+        }
+    }
+
+    @Test
+    public void testFroilandaRidesHorses(){
+        for(Stable s : farm.getStables()){
+            for(Horse h : s){
+                Assert.assertTrue(froilanda.mount(h));
+                Assert.assertNotNull(h.makeNoise());
+                Assert.assertTrue(froilanda.dismount(h));
             }
         }
     }
