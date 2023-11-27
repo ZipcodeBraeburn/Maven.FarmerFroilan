@@ -155,9 +155,6 @@ public class SundayTests {
         farm.addStables(stable2);
         farm.addStables(stable3);
 
-        tomatoStorage = new TomatoStorage();
-        potatoStorage = new PotatoStorage();
-        cornStorage = new CornStorage();
 
         farm.setCornStorage(cornStorage);
         farm.setEggStorage(eggStorage);
