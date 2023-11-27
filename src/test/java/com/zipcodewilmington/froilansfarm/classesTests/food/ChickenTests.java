@@ -3,12 +3,14 @@ package com.zipcodewilmington.froilansfarm.classesTests.food;
 import com.zipcodewilmington.froilansfarm.classes.food.Chicken;
 import com.zipcodewilmington.froilansfarm.classes.food.EdibleEgg;
 import com.zipcodewilmington.froilansfarm.classes.food.Potato;
+import com.zipcodewilmington.froilansfarm.classes.storage.PotatoStorage;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 public class ChickenTests {
     Potato potato;
+    PotatoStorage potatoStorage;
     EdibleEgg edibleEgg;
     Chicken chicken;
     @Before
@@ -16,6 +18,7 @@ public class ChickenTests {
     chicken = new Chicken();
     edibleEgg = new EdibleEgg();
     potato = new Potato();
+      potatoStorage  = new PotatoStorage();
     }
 
     @Test
@@ -46,7 +49,7 @@ public class ChickenTests {
     // dose it eat potato
     @Test
     public void TestIfChickenEatPotato(){
-     boolean eaten = chicken.eat( potato);
+     boolean eaten = chicken.eat( potato,potatoStorage );
 Assert.assertTrue(eaten);
     }
 }

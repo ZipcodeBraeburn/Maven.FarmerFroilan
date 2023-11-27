@@ -1,6 +1,10 @@
 package com.zipcodewilmington.froilansfarm.classes;
 
-public class CropRow {
+import com.zipcodewilmington.froilansfarm.interfaces.Crop;
+
+import java.util.ArrayList;
+
+public class CropRow<CropType extends Crop> extends ArrayList<CropType > {
 
 
 }

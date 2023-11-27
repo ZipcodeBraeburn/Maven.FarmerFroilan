@@ -1,11 +1,13 @@
 package com.zipcodewilmington.froilansfarm.classes.rideables;
 
+import com.zipcodewilmington.froilansfarm.abstractClasses.EdibleStorage;
 import com.zipcodewilmington.froilansfarm.abstractClasses.Person;
+import com.zipcodewilmington.froilansfarm.classes.food.EarCorn;
 import com.zipcodewilmington.froilansfarm.interfaces.Animal;
 import com.zipcodewilmington.froilansfarm.interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.interfaces.Rideable;
 
-public class Horse implements Rideable<Person>,Animal {
+public class Horse implements Rideable<Person>,Animal<EarCorn> {
 
     boolean ifMounted = false;
 
@@ -17,13 +19,17 @@ public class Horse implements Rideable<Person>,Animal {
         this.ifMounted = mounted;
     }
 
-    @Override
-    public boolean eat(Edible edible) {
-      return true;
-    }
+
 
     @Override
     public String makeNoise() {
        return null;
+    }
+
+
+
+    @Override
+    public boolean eat(EarCorn edible, EdibleStorage edibleStorage) {
+        return edibleStorage.remove(edible);
     }
 }
