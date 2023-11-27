@@ -3,14 +3,9 @@ package com.zipcodewilmington.froilansfarm.classesTests.rideables;
 import com.zipcodewilmington.froilansfarm.abstractClasses.Aircraft;
 import com.zipcodewilmington.froilansfarm.classes.CropRow;
 import com.zipcodewilmington.froilansfarm.classes.Farm;
-import com.zipcodewilmington.froilansfarm.classes.Froilan;
-import com.zipcodewilmington.froilansfarm.classes.Froilanda;
-import com.zipcodewilmington.froilansfarm.classes.food.Tomato;
 import com.zipcodewilmington.froilansfarm.classes.food.TomatoPlant;
 import com.zipcodewilmington.froilansfarm.classes.rideables.CropDuster;
-import com.zipcodewilmington.froilansfarm.interfaces.Crop;
 import com.zipcodewilmington.froilansfarm.interfaces.FarmVehicle;
-import com.zipcodewilmington.froilansfarm.interfaces.Vehicle;
 import org.junit.Assert;
 import org.junit.Test;
 

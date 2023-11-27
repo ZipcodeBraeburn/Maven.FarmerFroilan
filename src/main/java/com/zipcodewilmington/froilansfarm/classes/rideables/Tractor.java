@@ -1,15 +1,11 @@
 package com.zipcodewilmington.froilansfarm.classes.rideables;
 
+import com.zipcodewilmington.froilansfarm.abstractClasses.EdibleStorage;
 import com.zipcodewilmington.froilansfarm.classes.CropRow;
 import com.zipcodewilmington.froilansfarm.classes.Farm;
 import com.zipcodewilmington.froilansfarm.classes.Farmer;
-import com.zipcodewilmington.froilansfarm.classes.food.TomatoPlant;
-import com.zipcodewilmington.froilansfarm.interfaces.Crop;
-import com.zipcodewilmington.froilansfarm.interfaces.Edible;
-import com.zipcodewilmington.froilansfarm.interfaces.EdibleCrops;
+import com.zipcodewilmington.froilansfarm.abstractClasses.Crop;
 import com.zipcodewilmington.froilansfarm.interfaces.FarmVehicle;
-
-import java.util.ArrayList;
 
 public class Tractor implements FarmVehicle<Farmer> {
 
@@ -36,15 +32,16 @@ public class Tractor implements FarmVehicle<Farmer> {
         return "RrrooMMMMM";
     }
 
-    public int harvestCrop(CropRow <Crop> cropRow) {
+    public int harvestCrop(CropRow <Crop> cropRow, EdibleStorage storage) {
         int countCrop = 0;
 
-        for (int i = 0; i < cropRow.size(); i++) {
-            if (cropRow.get(i).yield(true) != null) {
-                countCrop++;
+        for (Crop c : cropRow) {
+            c.setHasBeenHarvested(true);
+            if(c.yield() != null){
+                storage.add(c);
             }
-
-
-        }return countCrop;
+            countCrop++;
+        }
+        return countCrop;
     }
 }

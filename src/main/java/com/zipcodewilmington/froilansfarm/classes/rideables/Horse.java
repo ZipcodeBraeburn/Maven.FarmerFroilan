@@ -30,7 +30,11 @@ public class Horse implements Rideable<Rider>,Animal<EarCorn> {
 
 
     @Override
-    public boolean eat(EarCorn edible, EdibleStorage edibleStorage) {
-        return edibleStorage.remove(edible);
+    public boolean eat(EarCorn edible, EdibleStorage<EarCorn> edibleStorage) {
+        if (edibleStorage.contains(edible)) {
+            return edibleStorage.remove(edible);
+        }
+        System.out.println("We don't got this!");
+        return false;
     }
 }

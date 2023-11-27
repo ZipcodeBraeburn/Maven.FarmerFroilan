@@ -28,13 +28,15 @@ public class ChickenTests {
     // dose it lay an egg
 @Test
     public void TestYield(){
-        EdibleEgg eggLayed = chicken.yield(true);
-        Assert.assertNull(eggLayed);
+        chicken.setHasBeenFertilized(true);
+        EdibleEgg notEdibleEgg = chicken.yield();
+        Assert.assertNull(notEdibleEgg);
 }
     @Test
     public void TestYieldNot(){
-        EdibleEgg eggLayed = chicken.yield(false);
-        Assert.assertNotNull(eggLayed);
+        chicken.setHasBeenFertilized(false);
+        EdibleEgg edibleEgg1 = chicken.yield();
+        Assert.assertNotNull(edibleEgg1);
     }
 
 

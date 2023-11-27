@@ -27,29 +27,29 @@ public class CornStalkTests {
     @Test
     public void testCornPlantYieldCrops1(){
         cornStalk.setHasBeenFertilized(true);
-        boolean hasBeenHarvested = true;
-        EdibleCrops tomatoYield = cornStalk.yield(hasBeenHarvested);
+        cornStalk.setHasBeenHarvested(true);
+        EdibleCrops tomatoYield = cornStalk.yield();
         Assert.assertNotNull(tomatoYield);
     }
     @Test
     public void testCornPlantYieldCrops2(){
         cornStalk.setHasBeenFertilized(false);
-        boolean hasBeenHarvested = true;
-        EdibleCrops tomatoYield = cornStalk.yield(hasBeenHarvested);
+        cornStalk.setHasBeenHarvested(true);
+        EdibleCrops tomatoYield = cornStalk.yield();
         Assert.assertNull(tomatoYield);
     }
     @Test
     public void testCornPlantYieldCrops3(){
         cornStalk.setHasBeenFertilized(true);
-        boolean hasBeenHarvested = false;
-        EdibleCrops tomatoYield = cornStalk.yield(hasBeenHarvested);
+        cornStalk.setHasBeenHarvested(false);
+        EdibleCrops tomatoYield = cornStalk.yield();
         Assert.assertNull(tomatoYield);
     }
     @Test
     public void testCornStalkPlantYieldCrops4(){
         cornStalk.setHasBeenFertilized(false);
-        boolean hasBeenHarvested = false;
-        EdibleCrops tomatoYield = cornStalk.yield(hasBeenHarvested);
+        cornStalk.setHasBeenHarvested(false);
+        EdibleCrops tomatoYield = cornStalk.yield();
         Assert.assertNull(tomatoYield);
     }
 
