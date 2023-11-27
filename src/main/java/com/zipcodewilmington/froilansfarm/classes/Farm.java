@@ -31,7 +31,6 @@ public class Farm {
     public ArrayList<Stable> getStables(){ return this.stables; }
     public ArrayList<ChickenCoop> getCoops(){ return this.coops; }
 
-    public FarmHouse getFarmHouse(){ return this.farmHouse; }
     public void setTomatoStorage(TomatoStorage tomatoStorage){
         this.tomatoStorage = tomatoStorage;
     }

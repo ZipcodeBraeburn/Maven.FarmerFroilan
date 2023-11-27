@@ -256,6 +256,11 @@ public class TuesdayTests {
     }
 
     @Test
+    public void testTractorOperate(){
+        Assert.assertTrue(tractor.operator(farm));
+    }
+
+    @Test
     public void testTractorMakeNoise(){
         Assert.assertEquals("RrrooMMMMM", tractor.makeNoise());
     }
