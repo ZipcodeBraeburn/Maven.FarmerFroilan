@@ -8,9 +8,7 @@ import com.zipcodewilmington.froilansfarm.interfaces.Rider;
 public abstract class Person implements Animal<Edible> {
     @Override
     public String makeNoise() {
-        System.out.println("What a great Day");
-
-        return null;
+        return "What a great Day";
     }
 
     @Override
