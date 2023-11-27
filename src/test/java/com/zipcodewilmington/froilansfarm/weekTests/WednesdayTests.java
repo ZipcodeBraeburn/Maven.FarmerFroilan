@@ -250,4 +250,10 @@ public class WednesdayTests {   static Field fieldTest;
 
     }
 
+    @Test
+    public void testChickenYield(){
+        coop.get(0).setHasBeenFertilized(false);
+        Assert.assertNotNull(coop.get(0).yield());
+    }
+
 }
