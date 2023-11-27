@@ -26,6 +26,7 @@ public class PotatoPlantTests {
     public void testPotatoPlantYieldCrops1(){
         boolean hasBeenFertilized = true;
         boolean hasBeenHarvested = true;
+        potatoPlant.setHasBeenFertilized(true);
         EdibleCrops potatoYield = potatoPlant.yield( hasBeenFertilized,  hasBeenHarvested);
         Assert.assertNotNull(potatoYield);
     }
@@ -33,6 +34,7 @@ public class PotatoPlantTests {
     public void testPotatoPlantYieldCrops2(){
         boolean hasBeenFertilized = false;
         boolean hasBeenHarvested = true;
+        potatoPlant.setHasBeenFertilized(false);
         EdibleCrops tomatoYield = potatoPlant.yield( hasBeenFertilized,  hasBeenHarvested);
         Assert.assertNull(tomatoYield);
     }
@@ -40,6 +42,7 @@ public class PotatoPlantTests {
     public void testPotatoPlantYieldCrops3(){
         boolean hasBeenFertilized = true;
         boolean hasBeenHarvested = false;
+        potatoPlant.setHasBeenFertilized(true);
         EdibleCrops potatoYield = potatoPlant.yield( hasBeenFertilized,  hasBeenHarvested);
         Assert.assertNull(potatoYield);
     }
@@ -47,6 +50,7 @@ public class PotatoPlantTests {
     public void testTomatoPlantYieldCrops4(){
         boolean hasBeenFertilized = false;
         boolean hasBeenHarvested = false;
+        potatoPlant.setHasBeenFertilized(false);
         EdibleCrops potatoYield = potatoPlant.yield( hasBeenFertilized,  hasBeenHarvested);
         Assert.assertNull(potatoYield);
     }
