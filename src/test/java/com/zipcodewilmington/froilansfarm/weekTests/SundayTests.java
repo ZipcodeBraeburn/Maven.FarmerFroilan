@@ -237,6 +237,26 @@ public class SundayTests {
         Assert.assertEquals("What a great Day", froilanda.makeNoise());
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     @Test
     public void testFroilanPlant(){
         CornStalk cornStalk = new CornStalk();
