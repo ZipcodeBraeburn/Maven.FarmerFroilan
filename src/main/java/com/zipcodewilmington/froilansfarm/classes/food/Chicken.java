@@ -9,6 +9,21 @@ import java.util.Random;
 
 public class Chicken implements Animal<Potato>, Produce<EdibleEgg> {
 
+    /*
+     * DON'T LOOK AT METHODS THEY'RE MESSY :(
+     * I'm kidding.
+     * But ya, it's messy.
+     *
+     * Anyway, Chicken is inheriting Animal and Produce.
+     * These two interfaces are GENERIC. You can tell because <> beside them.
+     * You can see below that our Chicken's eat method has Potato as a
+     * parameter. (Ignore the storage, it's following the same pattern though)
+     * This method SIGNATURE was automatically made for us
+     * when we told intelliJ that we'd like to implement methods,
+     * and the reason why was written in Animal :D
+     *
+     */
+
 
     boolean hasBeenFertilized;
 
