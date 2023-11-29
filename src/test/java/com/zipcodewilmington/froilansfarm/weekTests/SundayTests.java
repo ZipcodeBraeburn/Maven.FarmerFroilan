@@ -10,6 +10,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+
 public class SundayTests {
     static Field fieldTest;
     static CropRow<CornStalk> cropRow;
@@ -236,26 +237,6 @@ public class SundayTests {
         Assert.assertEquals("What a great Day", froilan.makeNoise());
         Assert.assertEquals("What a great Day", froilanda.makeNoise());
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     @Test
     public void testFroilanPlant(){

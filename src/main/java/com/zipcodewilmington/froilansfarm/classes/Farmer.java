@@ -13,8 +13,8 @@ public class Farmer extends Person implements Botanist, Rider<Tractor,Horse> {
 
     @Override
     public boolean mount(Tractor tractor) {
-        if(tractor.isIfMounted() == false){ // is false cause nobody is on the horse
-            tractor.setIfMounted(true);  //  the horse is  mounted
+        if(tractor.isIfMounted() == false){ // is false cause nobody is on the tractor
+            tractor.setIfMounted(true);  //  the tractor is  mounted
             return true;
         }
         return false;
@@ -22,8 +22,8 @@ public class Farmer extends Person implements Botanist, Rider<Tractor,Horse> {
 
     @Override
     public boolean dismount(Tractor tractor) {
-        if(tractor.isIfMounted() == true){ // is true cause somebody is on the  horse
-            tractor.setIfMounted(false);//  the horse is not mounted
+        if(tractor.isIfMounted() == true){ // is true cause somebody is on the  tractor
+            tractor.setIfMounted(false);//  the tractor is not mounted
             return true;
         }
         return false;
@@ -49,6 +49,12 @@ public class Farmer extends Person implements Botanist, Rider<Tractor,Horse> {
         return false;
     }
 
+    // I forgot to ask dolio about theseeeee
+    // ideally you would not want to write plant n times like this
+    // supposed to use generics to make a general plant method
+    // for all types of valid crops
+    // i.e. plant(Crop crop, CropRow<Crop> cropRow)... or something like this
+    // but it was giving us grief so we forced it like so below :D
     @Override
     public boolean plant(TomatoPlant crop, CropRow<TomatoPlant> cropRow) {
         return cropRow.add(crop);

@@ -7,7 +7,7 @@ import com.zipcodewilmington.froilansfarm.interfaces.Pilot;
 import com.zipcodewilmington.froilansfarm.classes.Farm;
 import com.zipcodewilmington.froilansfarm.interfaces.FarmVehicle;
 
-public class CropDuster extends Aircraft implements  FarmVehicle <Pilot> {
+public class CropDuster extends Aircraft implements FarmVehicle <Pilot> {
 
 
     boolean ifMouted = false;

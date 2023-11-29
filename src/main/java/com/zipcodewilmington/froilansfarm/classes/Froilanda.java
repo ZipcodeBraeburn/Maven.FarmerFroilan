@@ -7,6 +7,7 @@ import com.zipcodewilmington.froilansfarm.interfaces.Pilot;
 public class Froilanda extends Person implements Pilot {
 
     boolean ifMounted = false; // no one mounted it
+
     @Override
     public boolean mount(CropDuster cropDuster) {
         if(cropDuster.getIfMouted() == false){
