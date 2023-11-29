@@ -10,6 +10,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+
 public class SundayTests {
     static Field fieldTest;
     static CropRow<CornStalk> cropRow;
