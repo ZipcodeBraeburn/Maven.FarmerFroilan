@@ -1,5 +1,5 @@
 # UML
-![UML](https://github.com/ZipcodeBraeburn/Maven.FarmerFroilan/blob/master/Braeburn%20Farm%20UML.pdf?raw=true)
+![UML]((https://github.com/ZipcodeBraeburn/Maven.FarmerFroilan/blob/master/Braeburn%20Farm%20UML.png?raw=true))
 
 # Ol' McFroilan Had a Farm
 As a team, fork this repository to an Organization and submit the URL of your fork via the Student Portal. Each teammate will submit the **SAME URL.** 
