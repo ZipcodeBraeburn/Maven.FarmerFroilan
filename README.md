@@ -1,3 +1,6 @@
+# NOTICE!!!!
+Wrote a series of notes starting from Produce, another from Eater, and one in Housing by itself. For future reference.
+
 # UML
 ![UML]((https://github.com/ZipcodeBraeburn/Maven.FarmerFroilan/blob/master/Braeburn%20Farm%20UML.png?raw=true))
 
